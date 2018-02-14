@@ -1,0 +1,8 @@
+Start-Transcript -Path 'C:\Users\mnelson\OneDrive - Department for Education\MN\PS_Books\PowerShell\scripts\trans.txt'
+whoami
+$names = Get-Process | select -ExpandProperty Name
+    if ($names -contains "slack")
+        {
+        Stop-process -name "slack" -WhatIf
+        }
+Stop-Transcript 
